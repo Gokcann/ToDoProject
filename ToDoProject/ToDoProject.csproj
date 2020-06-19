@@ -67,9 +67,56 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\css\bootstrap.css" />
+    <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\simple-sidebar.css" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\js\bootstrap.js" />
+    <Content Include="assets\js\bootstrap.min.js" />
+    <Content Include="assets\js\jquery.js" />
+    <Content Include="flags\addflag.aspx" />
+    <Content Include="flags\deleteflag.aspx" />
+    <Content Include="flags\listflag.aspx" />
+    <Content Include="flags\updateflag.aspx" />
+    <Content Include="index.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="flags\addflag.aspx.cs">
+      <DependentUpon>addflag.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="flags\addflag.aspx.designer.cs">
+      <DependentUpon>addflag.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="flags\deleteflag.aspx.cs">
+      <DependentUpon>deleteflag.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="flags\deleteflag.aspx.designer.cs">
+      <DependentUpon>deleteflag.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="flags\listflag.aspx.cs">
+      <DependentUpon>listflag.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="flags\listflag.aspx.designer.cs">
+      <DependentUpon>listflag.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="flags\updateflag.aspx.cs">
+      <DependentUpon>updateflag.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="flags\updateflag.aspx.designer.cs">
+      <DependentUpon>updateflag.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MyDB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -81,6 +128,10 @@
     <Content Include="MyDB.xsc">
       <DependentUpon>MyDB.xsd</DependentUpon>
     </Content>
+    <Content Include="assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="MyDB.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -96,6 +147,9 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="daily\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

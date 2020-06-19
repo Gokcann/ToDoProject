@@ -26,7 +26,7 @@ namespace ToDoProject {
         
         private todoflagDataTable tabletodoflag;
         
-        private todotableDataTable tabletodotable;
+        private tododailyDataTable tabletododaily;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -59,8 +59,8 @@ namespace ToDoProject {
                 if ((ds.Tables["todoflag"] != null)) {
                     base.Tables.Add(new todoflagDataTable(ds.Tables["todoflag"]));
                 }
-                if ((ds.Tables["todotable"] != null)) {
-                    base.Tables.Add(new todotableDataTable(ds.Tables["todotable"]));
+                if ((ds.Tables["tododaily"] != null)) {
+                    base.Tables.Add(new tododailyDataTable(ds.Tables["tododaily"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -94,9 +94,9 @@ namespace ToDoProject {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public todotableDataTable todotable {
+        public tododailyDataTable tododaily {
             get {
-                return this.tabletodotable;
+                return this.tabletododaily;
             }
         }
         
@@ -170,8 +170,8 @@ namespace ToDoProject {
                 if ((ds.Tables["todoflag"] != null)) {
                     base.Tables.Add(new todoflagDataTable(ds.Tables["todoflag"]));
                 }
-                if ((ds.Tables["todotable"] != null)) {
-                    base.Tables.Add(new todotableDataTable(ds.Tables["todotable"]));
+                if ((ds.Tables["tododaily"] != null)) {
+                    base.Tables.Add(new tododailyDataTable(ds.Tables["tododaily"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -212,10 +212,10 @@ namespace ToDoProject {
                     this.tabletodoflag.InitVars();
                 }
             }
-            this.tabletodotable = ((todotableDataTable)(base.Tables["todotable"]));
+            this.tabletododaily = ((tododailyDataTable)(base.Tables["tododaily"]));
             if ((initTable == true)) {
-                if ((this.tabletodotable != null)) {
-                    this.tabletodotable.InitVars();
+                if ((this.tabletododaily != null)) {
+                    this.tabletododaily.InitVars();
                 }
             }
         }
@@ -230,8 +230,8 @@ namespace ToDoProject {
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tabletodoflag = new todoflagDataTable();
             base.Tables.Add(this.tabletodoflag);
-            this.tabletodotable = new todotableDataTable();
-            base.Tables.Add(this.tabletodotable);
+            this.tabletododaily = new tododailyDataTable();
+            base.Tables.Add(this.tabletododaily);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -242,7 +242,7 @@ namespace ToDoProject {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializetodotable() {
+        private bool ShouldSerializetododaily() {
             return false;
         }
         
@@ -305,7 +305,7 @@ namespace ToDoProject {
         public delegate void todoflagRowChangeEventHandler(object sender, todoflagRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void todotableRowChangeEventHandler(object sender, todotableRowChangeEvent e);
+        public delegate void tododailyRowChangeEventHandler(object sender, tododailyRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -589,16 +589,18 @@ namespace ToDoProject {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class todotableDataTable : global::System.Data.TypedTableBase<todotableRow> {
+        public partial class tododailyDataTable : global::System.Data.TypedTableBase<tododailyRow> {
             
-            private global::System.Data.DataColumn columntodo_id;
+            private global::System.Data.DataColumn columntododaily_id;
             
-            private global::System.Data.DataColumn columntodo_text;
+            private global::System.Data.DataColumn columntododaily_text;
+            
+            private global::System.Data.DataColumn columnflag_id;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public todotableDataTable() {
-                this.TableName = "todotable";
+            public tododailyDataTable() {
+                this.TableName = "tododaily";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -606,7 +608,7 @@ namespace ToDoProject {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal todotableDataTable(global::System.Data.DataTable table) {
+            internal tododailyDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -623,24 +625,32 @@ namespace ToDoProject {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected todotableDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected tododailyDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn todo_idColumn {
+            public global::System.Data.DataColumn tododaily_idColumn {
                 get {
-                    return this.columntodo_id;
+                    return this.columntododaily_id;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn todo_textColumn {
+            public global::System.Data.DataColumn tododaily_textColumn {
                 get {
-                    return this.columntodo_text;
+                    return this.columntododaily_text;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn flag_idColumn {
+                get {
+                    return this.columnflag_id;
                 }
             }
             
@@ -655,53 +665,54 @@ namespace ToDoProject {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public todotableRow this[int index] {
+            public tododailyRow this[int index] {
                 get {
-                    return ((todotableRow)(this.Rows[index]));
+                    return ((tododailyRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event todotableRowChangeEventHandler todotableRowChanging;
+            public event tododailyRowChangeEventHandler tododailyRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event todotableRowChangeEventHandler todotableRowChanged;
+            public event tododailyRowChangeEventHandler tododailyRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event todotableRowChangeEventHandler todotableRowDeleting;
+            public event tododailyRowChangeEventHandler tododailyRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event todotableRowChangeEventHandler todotableRowDeleted;
+            public event tododailyRowChangeEventHandler tododailyRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddtodotableRow(todotableRow row) {
+            public void AddtododailyRow(tododailyRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public todotableRow AddtodotableRow(string todo_text) {
-                todotableRow rowtodotableRow = ((todotableRow)(this.NewRow()));
+            public tododailyRow AddtododailyRow(string tododaily_text, int flag_id) {
+                tododailyRow rowtododailyRow = ((tododailyRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        todo_text};
-                rowtodotableRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowtodotableRow);
-                return rowtodotableRow;
+                        tododaily_text,
+                        flag_id};
+                rowtododailyRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowtododailyRow);
+                return rowtododailyRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public todotableRow FindBytodo_id(int todo_id) {
-                return ((todotableRow)(this.Rows.Find(new object[] {
-                            todo_id})));
+            public tododailyRow FindBytododaily_id(int tododaily_id) {
+                return ((tododailyRow)(this.Rows.Find(new object[] {
+                            tododaily_id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                todotableDataTable cln = ((todotableDataTable)(base.Clone()));
+                tododailyDataTable cln = ((tododailyDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -709,58 +720,61 @@ namespace ToDoProject {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new todotableDataTable();
+                return new tododailyDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columntodo_id = base.Columns["todo_id"];
-                this.columntodo_text = base.Columns["todo_text"];
+                this.columntododaily_id = base.Columns["tododaily_id"];
+                this.columntododaily_text = base.Columns["tododaily_text"];
+                this.columnflag_id = base.Columns["flag_id"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columntodo_id = new global::System.Data.DataColumn("todo_id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntodo_id);
-                this.columntodo_text = new global::System.Data.DataColumn("todo_text", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntodo_text);
+                this.columntododaily_id = new global::System.Data.DataColumn("tododaily_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntododaily_id);
+                this.columntododaily_text = new global::System.Data.DataColumn("tododaily_text", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntododaily_text);
+                this.columnflag_id = new global::System.Data.DataColumn("flag_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnflag_id);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columntodo_id}, true));
-                this.columntodo_id.AutoIncrement = true;
-                this.columntodo_id.AutoIncrementSeed = -1;
-                this.columntodo_id.AutoIncrementStep = -1;
-                this.columntodo_id.AllowDBNull = false;
-                this.columntodo_id.ReadOnly = true;
-                this.columntodo_id.Unique = true;
-                this.columntodo_text.MaxLength = 50;
+                                this.columntododaily_id}, true));
+                this.columntododaily_id.AutoIncrement = true;
+                this.columntododaily_id.AutoIncrementSeed = -1;
+                this.columntododaily_id.AutoIncrementStep = -1;
+                this.columntododaily_id.AllowDBNull = false;
+                this.columntododaily_id.ReadOnly = true;
+                this.columntododaily_id.Unique = true;
+                this.columntododaily_text.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public todotableRow NewtodotableRow() {
-                return ((todotableRow)(this.NewRow()));
+            public tododailyRow NewtododailyRow() {
+                return ((tododailyRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new todotableRow(builder);
+                return new tododailyRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(todotableRow);
+                return typeof(tododailyRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.todotableRowChanged != null)) {
-                    this.todotableRowChanged(this, new todotableRowChangeEvent(((todotableRow)(e.Row)), e.Action));
+                if ((this.tododailyRowChanged != null)) {
+                    this.tododailyRowChanged(this, new tododailyRowChangeEvent(((tododailyRow)(e.Row)), e.Action));
                 }
             }
             
@@ -768,8 +782,8 @@ namespace ToDoProject {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.todotableRowChanging != null)) {
-                    this.todotableRowChanging(this, new todotableRowChangeEvent(((todotableRow)(e.Row)), e.Action));
+                if ((this.tododailyRowChanging != null)) {
+                    this.tododailyRowChanging(this, new tododailyRowChangeEvent(((tododailyRow)(e.Row)), e.Action));
                 }
             }
             
@@ -777,8 +791,8 @@ namespace ToDoProject {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.todotableRowDeleted != null)) {
-                    this.todotableRowDeleted(this, new todotableRowChangeEvent(((todotableRow)(e.Row)), e.Action));
+                if ((this.tododailyRowDeleted != null)) {
+                    this.tododailyRowDeleted(this, new tododailyRowChangeEvent(((tododailyRow)(e.Row)), e.Action));
                 }
             }
             
@@ -786,14 +800,14 @@ namespace ToDoProject {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.todotableRowDeleting != null)) {
-                    this.todotableRowDeleting(this, new todotableRowChangeEvent(((todotableRow)(e.Row)), e.Action));
+                if ((this.tododailyRowDeleting != null)) {
+                    this.tododailyRowDeleting(this, new tododailyRowChangeEvent(((tododailyRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemovetodotableRow(todotableRow row) {
+            public void RemovetododailyRow(tododailyRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -820,7 +834,7 @@ namespace ToDoProject {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "todotableDataTable";
+                attribute2.FixedValue = "tododailyDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -918,54 +932,82 @@ namespace ToDoProject {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class todotableRow : global::System.Data.DataRow {
+        public partial class tododailyRow : global::System.Data.DataRow {
             
-            private todotableDataTable tabletodotable;
+            private tododailyDataTable tabletododaily;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal todotableRow(global::System.Data.DataRowBuilder rb) : 
+            internal tododailyRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tabletodotable = ((todotableDataTable)(this.Table));
+                this.tabletododaily = ((tododailyDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int todo_id {
+            public int tododaily_id {
                 get {
-                    return ((int)(this[this.tabletodotable.todo_idColumn]));
+                    return ((int)(this[this.tabletododaily.tododaily_idColumn]));
                 }
                 set {
-                    this[this.tabletodotable.todo_idColumn] = value;
+                    this[this.tabletododaily.tododaily_idColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string todo_text {
+            public string tododaily_text {
                 get {
                     try {
-                        return ((string)(this[this.tabletodotable.todo_textColumn]));
+                        return ((string)(this[this.tabletododaily.tododaily_textColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("\'todotable\' tablosundaki \'todo_text\' sütunun değeri DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("\'tododaily\' tablosundaki \'tododaily_text\' sütunun değeri DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletodotable.todo_textColumn] = value;
+                    this[this.tabletododaily.tododaily_textColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Istodo_textNull() {
-                return this.IsNull(this.tabletodotable.todo_textColumn);
+            public int flag_id {
+                get {
+                    try {
+                        return ((int)(this[this.tabletododaily.flag_idColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'tododaily\' tablosundaki \'flag_id\' sütunun değeri DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletododaily.flag_idColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Settodo_textNull() {
-                this[this.tabletodotable.todo_textColumn] = global::System.Convert.DBNull;
+            public bool Istododaily_textNull() {
+                return this.IsNull(this.tabletododaily.tododaily_textColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Settododaily_textNull() {
+                this[this.tabletododaily.tododaily_textColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isflag_idNull() {
+                return this.IsNull(this.tabletododaily.flag_idColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setflag_idNull() {
+                this[this.tabletododaily.flag_idColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1007,22 +1049,22 @@ namespace ToDoProject {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class todotableRowChangeEvent : global::System.EventArgs {
+        public class tododailyRowChangeEvent : global::System.EventArgs {
             
-            private todotableRow eventRow;
+            private tododailyRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public todotableRowChangeEvent(todotableRow row, global::System.Data.DataRowAction action) {
+            public tododailyRowChangeEvent(tododailyRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public todotableRow Row {
+            public tododailyRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -1201,20 +1243,20 @@ namespace ToDoProject.MyDBTableAdapters {
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "INSERT INTO [todoflag] ([flag_text]) VALUES (@flag_text)";
+            this._commandCollection[1].CommandText = "DELETE FROM [todoflag] WHERE (([flag_id] = @Original_flag_id))";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flag_text", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "flag_text", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_flag_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "flag_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "DELETE FROM [todoflag] WHERE (([flag_id] = @Original_flag_id))";
+            this._commandCollection[2].CommandText = "SELECT        todoflag.*\r\nFROM            todoflag\r\nWHERE (([flag_id] = @Original" +
+                "_flag_id))";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_flag_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "flag_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_flag_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "flag_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "SELECT        todoflag.*\r\nFROM            todoflag\r\nWHERE (([flag_id] = @Original" +
-                "_flag_id))";
+            this._commandCollection[3].CommandText = "INSERT INTO [todoflag] ([flag_text]) VALUES (@flag_text)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_flag_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "flag_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flag_text", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "flag_text", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[4].Connection = this.Connection;
             this._commandCollection[4].CommandText = "UPDATE [todoflag] SET [flag_text] = @flag_text WHERE (([flag_id] = @Original_flag" +
@@ -1241,7 +1283,7 @@ namespace ToDoProject.MyDBTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual MyDB.todoflagDataTable GetFlagData() {
+        public virtual MyDB.todoflagDataTable GetFlag() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             MyDB.todoflagDataTable dataTable = new MyDB.todoflagDataTable();
             this.Adapter.Fill(dataTable);
@@ -1252,8 +1294,8 @@ namespace ToDoProject.MyDBTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByFlag(MyDB.todoflagDataTable dataTable, int Original_flag_id) {
-            this.Adapter.SelectCommand = this.CommandCollection[3];
+        public virtual int FillSingleFlag(MyDB.todoflagDataTable dataTable, int Original_flag_id) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(Original_flag_id));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1266,8 +1308,8 @@ namespace ToDoProject.MyDBTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual MyDB.todoflagDataTable FlagSingleData(int Original_flag_id) {
-            this.Adapter.SelectCommand = this.CommandCollection[3];
+        public virtual MyDB.todoflagDataTable GetSingleFlag(int Original_flag_id) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(Original_flag_id));
             MyDB.todoflagDataTable dataTable = new MyDB.todoflagDataTable();
             this.Adapter.Fill(dataTable);
@@ -1383,15 +1425,10 @@ namespace ToDoProject.MyDBTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
-        public virtual int AddFlag(string flag_text) {
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
+        public virtual int DeleteFlag(int Original_flag_id) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
-            if ((flag_text == null)) {
-                command.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[0].Value = ((string)(flag_text));
-            }
+            command.Parameters[0].Value = ((int)(Original_flag_id));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1412,10 +1449,15 @@ namespace ToDoProject.MyDBTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
-        public virtual int DeleteFlag(int Original_flag_id) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
-            command.Parameters[0].Value = ((int)(Original_flag_id));
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
+        public virtual int InsertFlag(string flag_text) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
+            if ((flag_text == null)) {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[0].Value = ((string)(flag_text));
+            }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1473,7 +1515,7 @@ namespace ToDoProject.MyDBTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class todotableTableAdapter : global::System.ComponentModel.Component {
+    public partial class tododailyTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -1487,7 +1529,7 @@ namespace ToDoProject.MyDBTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public todotableTableAdapter() {
+        public tododailyTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -1584,27 +1626,31 @@ namespace ToDoProject.MyDBTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "todotable";
-            tableMapping.ColumnMappings.Add("todo_id", "todo_id");
-            tableMapping.ColumnMappings.Add("todo_text", "todo_text");
+            tableMapping.DataSetTable = "tododaily";
+            tableMapping.ColumnMappings.Add("tododaily_id", "tododaily_id");
+            tableMapping.ColumnMappings.Add("tododaily_text", "tododaily_text");
+            tableMapping.ColumnMappings.Add("flag_id", "flag_id");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [todotable] WHERE (([todo_id] = @Original_todo_id))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [tododaily] WHERE (([tododaily_id] = @Original_tododaily_id))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_todo_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "todo_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tododaily_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tododaily_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [todotable] ([todo_text]) VALUES (@todo_text)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [tododaily] ([tododaily_text], [flag_id]) VALUES (@tododaily_text, @f" +
+                "lag_id)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@todo_text", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "todo_text", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tododaily_text", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tododaily_text", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flag_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flag_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [todotable] SET [todo_text] = @todo_text WHERE (([todo_id] = @Original_tod" +
-                "o_id))";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [tododaily] SET [tododaily_text] = @tododaily_text, [flag_id] = @flag_id W" +
+                "HERE (([tododaily_id] = @Original_tododaily_id))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@todo_text", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "todo_text", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_todo_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "todo_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tododaily_text", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tododaily_text", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flag_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flag_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tododaily_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tododaily_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1620,38 +1666,41 @@ namespace ToDoProject.MyDBTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[5];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        todotable.*\r\nFROM            todotable";
+            this._commandCollection[0].CommandText = "SELECT        tododaily.*\r\nFROM            tododaily";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "INSERT INTO [todotable] ([todo_text]) VALUES (@todo_text)";
+            this._commandCollection[1].CommandText = "DELETE FROM [tododaily] WHERE (([tododaily_id] = @Original_tododaily_id))";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@todo_text", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "todo_text", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tododaily_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "tododaily_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "DELETE FROM [todotable] WHERE (([todo_id] = @Original_todo_id))";
+            this._commandCollection[2].CommandText = "SELECT        tododaily.*\r\nFROM            tododaily\r\nWHERE (([tododaily_id] = @O" +
+                "riginal_tododaily_id))";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_todo_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "todo_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tododaily_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "tododaily_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "SELECT        todotable.*\r\nFROM            todotable\r\nWHERE (([todo_id] = @Origin" +
-                "al_todo_id))";
+            this._commandCollection[3].CommandText = "INSERT INTO [tododaily] ([tododaily_text], [flag_id]) VALUES (@tododaily_text, @f" +
+                "lag_id)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_todo_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "todo_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tododaily_text", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "tododaily_text", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flag_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "flag_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[4].Connection = this.Connection;
-            this._commandCollection[4].CommandText = "UPDATE [todotable] SET [todo_text] = @todo_text WHERE (([todo_id] = @Original_tod" +
-                "o_id))";
+            this._commandCollection[4].CommandText = "UPDATE [tododaily] SET [tododaily_text] = @tododaily_text, [flag_id] = @flag_id W" +
+                "HERE (([tododaily_id] = @Original_tododaily_id))";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@todo_text", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "todo_text", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_todo_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "todo_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tododaily_text", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "tododaily_text", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flag_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "flag_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tododaily_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "tododaily_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int FillTodo(MyDB.todotableDataTable dataTable) {
+        public virtual int FillDaily(MyDB.tododailyDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1664,9 +1713,9 @@ namespace ToDoProject.MyDBTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual MyDB.todotableDataTable GetTodoData() {
+        public virtual MyDB.tododailyDataTable GetDaily() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            MyDB.todotableDataTable dataTable = new MyDB.todotableDataTable();
+            MyDB.tododailyDataTable dataTable = new MyDB.tododailyDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1675,9 +1724,9 @@ namespace ToDoProject.MyDBTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByTodo(MyDB.todotableDataTable dataTable, int Original_todo_id) {
-            this.Adapter.SelectCommand = this.CommandCollection[3];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(Original_todo_id));
+        public virtual int FillSingleDaily(MyDB.tododailyDataTable dataTable, int Original_tododaily_id) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(Original_tododaily_id));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -1689,10 +1738,10 @@ namespace ToDoProject.MyDBTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual MyDB.todotableDataTable TodoSingleData(int Original_todo_id) {
-            this.Adapter.SelectCommand = this.CommandCollection[3];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(Original_todo_id));
-            MyDB.todotableDataTable dataTable = new MyDB.todotableDataTable();
+        public virtual MyDB.tododailyDataTable GetSingleDaily(int Original_tododaily_id) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(Original_tododaily_id));
+            MyDB.tododailyDataTable dataTable = new MyDB.tododailyDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1700,7 +1749,7 @@ namespace ToDoProject.MyDBTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(MyDB.todotableDataTable dataTable) {
+        public virtual int Update(MyDB.tododailyDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -1708,7 +1757,7 @@ namespace ToDoProject.MyDBTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(MyDB dataSet) {
-            return this.Adapter.Update(dataSet, "todotable");
+            return this.Adapter.Update(dataSet, "tododaily");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1730,8 +1779,8 @@ namespace ToDoProject.MyDBTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_todo_id) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_todo_id));
+        public virtual int Delete(int Original_tododaily_id) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_tododaily_id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1752,12 +1801,18 @@ namespace ToDoProject.MyDBTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string todo_text) {
-            if ((todo_text == null)) {
+        public virtual int Insert(string tododaily_text, global::System.Nullable<int> flag_id) {
+            if ((tododaily_text == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(todo_text));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(tododaily_text));
+            }
+            if ((flag_id.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(flag_id.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1779,14 +1834,20 @@ namespace ToDoProject.MyDBTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string todo_text, int Original_todo_id) {
-            if ((todo_text == null)) {
+        public virtual int Update(string tododaily_text, global::System.Nullable<int> flag_id, int Original_tododaily_id) {
+            if ((tododaily_text == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(todo_text));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(tododaily_text));
             }
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_todo_id));
+            if ((flag_id.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(flag_id.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_tododaily_id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1806,15 +1867,10 @@ namespace ToDoProject.MyDBTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
-        public virtual int AddTodo(string todo_text) {
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
+        public virtual int DeleteDaily(int Original_tododaily_id) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
-            if ((todo_text == null)) {
-                command.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[0].Value = ((string)(todo_text));
-            }
+            command.Parameters[0].Value = ((int)(Original_tododaily_id));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1835,10 +1891,21 @@ namespace ToDoProject.MyDBTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
-        public virtual int DeleteTodo(int Original_todo_id) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
-            command.Parameters[0].Value = ((int)(Original_todo_id));
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
+        public virtual int InsertDaily(string tododaily_text, global::System.Nullable<int> flag_id) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
+            if ((tododaily_text == null)) {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[0].Value = ((string)(tododaily_text));
+            }
+            if ((flag_id.HasValue == true)) {
+                command.Parameters[1].Value = ((int)(flag_id.Value));
+            }
+            else {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1860,15 +1927,21 @@ namespace ToDoProject.MyDBTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int UpdateTodo(string todo_text, int Original_todo_id) {
+        public virtual int UpdateDaily(string tododaily_text, global::System.Nullable<int> flag_id, int Original_tododaily_id) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[4];
-            if ((todo_text == null)) {
+            if ((tododaily_text == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[0].Value = ((string)(todo_text));
+                command.Parameters[0].Value = ((string)(tododaily_text));
             }
-            command.Parameters[1].Value = ((int)(Original_todo_id));
+            if ((flag_id.HasValue == true)) {
+                command.Parameters[1].Value = ((int)(flag_id.Value));
+            }
+            else {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            command.Parameters[2].Value = ((int)(Original_tododaily_id));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1901,7 +1974,7 @@ namespace ToDoProject.MyDBTableAdapters {
         
         private todoflagTableAdapter _todoflagTableAdapter;
         
-        private todotableTableAdapter _todotableTableAdapter;
+        private tododailyTableAdapter _tododailyTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1937,12 +2010,12 @@ namespace ToDoProject.MyDBTableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public todotableTableAdapter todotableTableAdapter {
+        public tododailyTableAdapter tododailyTableAdapter {
             get {
-                return this._todotableTableAdapter;
+                return this._tododailyTableAdapter;
             }
             set {
-                this._todotableTableAdapter = value;
+                this._tododailyTableAdapter = value;
             }
         }
         
@@ -1969,9 +2042,9 @@ namespace ToDoProject.MyDBTableAdapters {
                             && (this._todoflagTableAdapter.Connection != null))) {
                     return this._todoflagTableAdapter.Connection;
                 }
-                if (((this._todotableTableAdapter != null) 
-                            && (this._todotableTableAdapter.Connection != null))) {
-                    return this._todotableTableAdapter.Connection;
+                if (((this._tododailyTableAdapter != null) 
+                            && (this._tododailyTableAdapter.Connection != null))) {
+                    return this._tododailyTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1989,7 +2062,7 @@ namespace ToDoProject.MyDBTableAdapters {
                 if ((this._todoflagTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._todotableTableAdapter != null)) {
+                if ((this._tododailyTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -2012,12 +2085,12 @@ namespace ToDoProject.MyDBTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._todotableTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.todotable.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._tododailyTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tododaily.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._todotableTableAdapter.Update(updatedRows));
+                    result = (result + this._tododailyTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -2039,11 +2112,11 @@ namespace ToDoProject.MyDBTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._todotableTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.todotable.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._tododailyTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tododaily.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._todotableTableAdapter.Update(addedRows));
+                    result = (result + this._tododailyTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -2057,11 +2130,11 @@ namespace ToDoProject.MyDBTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateDeletedRows(MyDB dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._todotableTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.todotable.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tododailyTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tododaily.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._todotableTableAdapter.Update(deletedRows));
+                    result = (result + this._tododailyTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -2117,8 +2190,8 @@ namespace ToDoProject.MyDBTableAdapters {
                 throw new global::System.ArgumentException("TableAdapterManager tarafından yönetilen tüm TableAdapter\'lar aynı bağlantı dizes" +
                         "ini kullanmalıdır.");
             }
-            if (((this._todotableTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._todotableTableAdapter.Connection) == false))) {
+            if (((this._tododailyTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._tododailyTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("TableAdapterManager tarafından yönetilen tüm TableAdapter\'lar aynı bağlantı dizes" +
                         "ini kullanmalıdır.");
             }
@@ -2163,13 +2236,13 @@ namespace ToDoProject.MyDBTableAdapters {
                         adaptersWithAcceptChangesDuringUpdate.Add(this._todoflagTableAdapter.Adapter);
                     }
                 }
-                if ((this._todotableTableAdapter != null)) {
-                    revertConnections.Add(this._todotableTableAdapter, this._todotableTableAdapter.Connection);
-                    this._todotableTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._todotableTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._todotableTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._todotableTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._todotableTableAdapter.Adapter);
+                if ((this._tododailyTableAdapter != null)) {
+                    revertConnections.Add(this._tododailyTableAdapter, this._tododailyTableAdapter.Connection);
+                    this._tododailyTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._tododailyTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._tododailyTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._tododailyTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._tododailyTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -2234,9 +2307,9 @@ namespace ToDoProject.MyDBTableAdapters {
                     this._todoflagTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._todoflagTableAdapter]));
                     this._todoflagTableAdapter.Transaction = null;
                 }
-                if ((this._todotableTableAdapter != null)) {
-                    this._todotableTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._todotableTableAdapter]));
-                    this._todotableTableAdapter.Transaction = null;
+                if ((this._tododailyTableAdapter != null)) {
+                    this._tododailyTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tododailyTableAdapter]));
+                    this._tododailyTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
