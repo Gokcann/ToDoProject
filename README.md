@@ -1,5 +1,7 @@
 <h1>Personal Task Tracker</h1>
+
 This project is a job application for "PITON Ar-Ge ve Yazılım Evi".
+
                         
 *I apply for the <code>"back-end developer"</code> position. 
                             
