@@ -10,3 +10,5 @@ This project is a job application for "PITON Ar-Ge ve Yazılım Evi".
 *Database is <code>MS SQL Server Developer Edition 2019</code>.
                             
 *Back-End is <code>ASP.NET(C#) framework</code>.
+
+Note: "todolistDB.sql" file is creates the same database.
