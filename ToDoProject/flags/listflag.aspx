@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
 
-    <%--bootstrap ve css dosyalarini ekliyoruz--%>
+    <%--ihtiyacimiz olan frontend dosyalarini ekliyoruz.--%>
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/assets/css/simple-sidebar.css" rel="stylesheet" />
     <script src="/assets/js/jquery.js"></script>
@@ -32,10 +32,10 @@
                     <a href="/daily/adddaily.aspx">Daily</a>
                 </li>
                 <li>
-                    <a href="#">Weekly</a>
+                    <a href="/weekly/addweekly.aspx">Weekly</a>
                 </li>
                 <li>
-                    <a href="#">Monthly</a>
+                    <a href="/monthly/addmonthly.aspx">Monthly</a>
                 </li>
             </ul>
         </div>
@@ -64,14 +64,13 @@
                                     <asp:Repeater ID="repeaterId" runat="server">
                                         <ItemTemplate>
                                             <tr>
-                                                <td> <%#Eval("flag_id") %> </td>
-                                                 <td> <%#Eval("flag_text") %> </td>
+                                                <td><%#Eval("flag_id") %> </td>
+                                                <td><%#Eval("flag_text") %> </td>
                                                 <%--Delete ve Update butonlarini da ucuncu sutuna ekliyoruz.--%>
-                                                 <td>
-                                                     <%--Tiklanilan verinin edit islemlerine gitmek icin(ID kullaniyoruz).--%>
-                                                     <asp:HyperLink NavigateUrl='<%# "deleteflag.aspx?id=" + Eval("flag_id") %>' runat="server" CssClass="btn btn-danger" > Delete </asp:HyperLink>
-                                                     <asp:HyperLink NavigateUrl='<%# "updateflag.aspx?id=" + Eval("flag_id") %>' runat="server" CssClass="btn btn-success" > Update </asp:HyperLink>
-                                                     
+                                                <td>
+                                                    <%--Tiklanilan verinin edit islemlerine gitmek icin(ID kullaniyoruz).--%>
+                                                    <asp:HyperLink NavigateUrl='<%# "deleteflag.aspx?id=" + Eval("flag_id") %>' runat="server" CssClass="btn btn-danger"> Delete </asp:HyperLink>
+                                                    <asp:HyperLink NavigateUrl='<%# "updateflag.aspx?id=" + Eval("flag_id") %>' runat="server" CssClass="btn btn-success"> Update </asp:HyperLink>
                                             </tr>
                                         </ItemTemplate>
                                     </asp:Repeater>

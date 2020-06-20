@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
 
-    <%--bootstrap ve css dosyalarini ekliyoruz--%>
+    <%--ihtiyacimiz olan frontend dosyalarini ekliyoruz.--%>
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/assets/css/simple-sidebar.css" rel="stylesheet" />
     <script src="/assets/js/jquery.js"></script>
@@ -32,10 +32,10 @@
                     <a href="/daily/adddaily.aspx">Daily</a>
                 </li>
                 <li>
-                    <a href="#">Weekly</a>
+                    <a href="/weekly/addweekly.aspx">Weekly</a>
                 </li>
                 <li>
-                    <a href="#">Monthly</a>
+                    <a href="/monthly/addmonthly.aspx">Monthly</a>
                 </li>
             </ul>
         </div>

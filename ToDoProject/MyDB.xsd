@@ -49,7 +49,7 @@ FROM            todoflag</CommandText>
               <Mapping SourceColumn="flag_text" DataSetColumn="flag_text" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="todolistDBConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteFlag" Modifier="Public" Name="DeleteFlag" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DeleteFlag">
+              <DbSource ConnectionRef="todolistDBConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteFlag" Modifier="Public" Name="DeleteFlag" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteFlag">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM [todoflag] WHERE (([flag_id] = @Original_flag_id))</CommandText>
@@ -71,7 +71,7 @@ WHERE (([flag_id] = @Original_flag_id))</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="todolistDBConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertFlag" Modifier="Public" Name="InsertFlag" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="InsertFlag">
+              <DbSource ConnectionRef="todolistDBConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertFlag" Modifier="Public" Name="InsertFlag" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertFlag">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO [todoflag] ([flag_text]) VALUES (@flag_text)</CommandText>
@@ -81,7 +81,7 @@ WHERE (([flag_id] = @Original_flag_id))</CommandText>
                   </DbCommand>
                 </InsertCommand>
               </DbSource>
-              <DbSource ConnectionRef="todolistDBConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateFlag" Modifier="Public" Name="UpdateFlag" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="UpdateFlag">
+              <DbSource ConnectionRef="todolistDBConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateFlag" Modifier="Public" Name="UpdateFlag" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="UpdateFlag">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE [todoflag] SET [flag_text] = @flag_text WHERE (([flag_id] = @Original_flag_id))</CommandText>
@@ -139,7 +139,7 @@ FROM            tododaily</CommandText>
               <Mapping SourceColumn="flag_id" DataSetColumn="flag_id" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="todolistDBConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteDaily" Modifier="Public" Name="DeleteDaily" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DeleteDaily">
+              <DbSource ConnectionRef="todolistDBConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteDaily" Modifier="Public" Name="DeleteDaily" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteDaily">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM [tododaily] WHERE (([tododaily_id] = @Original_tododaily_id))</CommandText>
@@ -161,7 +161,7 @@ WHERE (([tododaily_id] = @Original_tododaily_id))</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="todolistDBConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertDaily" Modifier="Public" Name="InsertDaily" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="InsertDaily">
+              <DbSource ConnectionRef="todolistDBConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertDaily" Modifier="Public" Name="InsertDaily" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertDaily">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO [tododaily] ([tododaily_text], [flag_id]) VALUES (@tododaily_text, @flag_id)</CommandText>
@@ -172,7 +172,7 @@ WHERE (([tododaily_id] = @Original_tododaily_id))</CommandText>
                   </DbCommand>
                 </InsertCommand>
               </DbSource>
-              <DbSource ConnectionRef="todolistDBConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateDaily" Modifier="Public" Name="UpdateDaily" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="UpdateDaily">
+              <DbSource ConnectionRef="todolistDBConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateDaily" Modifier="Public" Name="UpdateDaily" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="UpdateDaily">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE [tododaily] SET [tododaily_text] = @tododaily_text, [flag_id] = @flag_id WHERE (([tododaily_id] = @Original_tododaily_id))</CommandText>
@@ -180,6 +180,188 @@ WHERE (([tododaily_id] = @Original_tododaily_id))</CommandText>
                       <Parameter AllowDbNull="true" AutogeneratedName="tododaily_text" ColumnName="tododaily_text" DataSourceName="todolistDB.dbo.tododaily" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@tododaily_text" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="tododaily_text" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="flag_id" ColumnName="flag_id" DataSourceName="todolistDB.dbo.tododaily" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@flag_id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="flag_id" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="Original_tododaily_id" ColumnName="tododaily_id" DataSourceName="todolistDB.dbo.tododaily" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Original_tododaily_id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="tododaily_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="todoweeklyTableAdapter" GeneratorDataComponentClassName="todoweeklyTableAdapter" Name="todoweekly" UserDataComponentName="todoweeklyTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="todolistDBConnectionString (Web.config)" DbObjectName="todolistDB.dbo.todoweekly" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillWeekly" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetWeekly" GeneratorSourceName="FillWeekly" GetMethodModifier="Public" GetMethodName="GetWeekly" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetWeekly" UserSourceName="FillWeekly">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [todoweekly] WHERE (([todoweekly_id] = @Original_todoweekly_id))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_todoweekly_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="todoweekly_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [todoweekly] ([todoweekly_text], [flag_id]) VALUES (@todoweekly_text, @flag_id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@todoweekly_text" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="todoweekly_text" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@flag_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="flag_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        todoweekly.*
+FROM            todoweekly</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [todoweekly] SET [todoweekly_text] = @todoweekly_text, [flag_id] = @flag_id WHERE (([todoweekly_id] = @Original_todoweekly_id))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@todoweekly_text" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="todoweekly_text" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@flag_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="flag_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_todoweekly_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="todoweekly_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="todoweekly_id" DataSetColumn="todoweekly_id" />
+              <Mapping SourceColumn="todoweekly_text" DataSetColumn="todoweekly_text" />
+              <Mapping SourceColumn="flag_id" DataSetColumn="flag_id" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="todolistDBConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteWeekly" Modifier="Public" Name="DeleteWeekly" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DeleteWeekly">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>DELETE FROM [todoweekly] WHERE (([todoweekly_id] = @Original_todoweekly_id))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_todoweekly_id" ColumnName="todoweekly_id" DataSourceName="todolistDB.dbo.todoweekly" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Original_todoweekly_id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="todoweekly_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+              </DbSource>
+              <DbSource ConnectionRef="todolistDBConnectionString (Web.config)" DbObjectName="todolistDB.dbo.todoweekly" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillSingleWeekly" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetSingleWeekly" GeneratorSourceName="FillSingleWeekly" GetMethodModifier="Public" GetMethodName="GetSingleWeekly" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetSingleWeekly" UserSourceName="FillSingleWeekly">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        todoweekly.*
+FROM            todoweekly WHERE (([todoweekly_id] = @Original_todoweekly_id))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_todoweekly_id" ColumnName="todoweekly_id" DataSourceName="todolistDB.dbo.todoweekly" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Original_todoweekly_id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="todoweekly_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="todolistDBConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertWeekly" Modifier="Public" Name="InsertWeekly" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="InsertWeekly">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>INSERT INTO [todoweekly] ([todoweekly_text], [flag_id]) VALUES (@todoweekly_text, @flag_id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="todoweekly_text" ColumnName="todoweekly_text" DataSourceName="todolistDB.dbo.todoweekly" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@todoweekly_text" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="todoweekly_text" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="flag_id" ColumnName="flag_id" DataSourceName="todolistDB.dbo.todoweekly" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@flag_id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="flag_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+              </DbSource>
+              <DbSource ConnectionRef="todolistDBConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateWeekly" Modifier="Public" Name="UpdateWeekly" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="UpdateWeekly">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE [todoweekly] SET [todoweekly_text] = @todoweekly_text, [flag_id] = @flag_id WHERE (([todoweekly_id] = @Original_todoweekly_id))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="todoweekly_text" ColumnName="todoweekly_text" DataSourceName="todolistDB.dbo.todoweekly" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@todoweekly_text" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="todoweekly_text" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="flag_id" ColumnName="flag_id" DataSourceName="todolistDB.dbo.todoweekly" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@flag_id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="flag_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_todoweekly_id" ColumnName="todoweekly_id" DataSourceName="todolistDB.dbo.todoweekly" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Original_todoweekly_id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="todoweekly_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="todomonthlyTableAdapter" GeneratorDataComponentClassName="todomonthlyTableAdapter" Name="todomonthly" UserDataComponentName="todomonthlyTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="todolistDBConnectionString (Web.config)" DbObjectName="todolistDB.dbo.todomonthly" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillMonthly" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetMonthly" GeneratorSourceName="FillMonthly" GetMethodModifier="Public" GetMethodName="GetMonthly" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetMonthly" UserSourceName="FillMonthly">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [todomonthly] WHERE (([todomonthly_id] = @Original_todomonthly_id))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_todomonthly_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="todomonthly_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [todomonthly] ([todomonthly_text], [flag_id]) VALUES (@todomonthly_text, @flag_id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@todomonthly_text" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="todomonthly_text" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@flag_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="flag_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        todomonthly.*
+FROM            todomonthly</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [todomonthly] SET [todomonthly_text] = @todomonthly_text, [flag_id] = @flag_id WHERE (([todomonthly_id] = @Original_todomonthly_id))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@todomonthly_text" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="todomonthly_text" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@flag_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="flag_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_todomonthly_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="todomonthly_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="todomonthly_id" DataSetColumn="todomonthly_id" />
+              <Mapping SourceColumn="todomonthly_text" DataSetColumn="todomonthly_text" />
+              <Mapping SourceColumn="flag_id" DataSetColumn="flag_id" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="todolistDBConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteMonthly" Modifier="Public" Name="DeleteMonthly" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DeleteMonthly">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>DELETE FROM [todomonthly] WHERE (([todomonthly_id] = @Original_todomonthly_id))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_todomonthly_id" ColumnName="todomonthly_id" DataSourceName="todolistDB.dbo.todomonthly" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Original_todomonthly_id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="todomonthly_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+              </DbSource>
+              <DbSource ConnectionRef="todolistDBConnectionString (Web.config)" DbObjectName="todolistDB.dbo.todomonthly" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillSingleMontly" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetSingleMontly" GeneratorSourceName="FillSingleMontly" GetMethodModifier="Public" GetMethodName="GetSingleMontly" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetSingleMontly" UserSourceName="FillSingleMontly">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        todomonthly.*
+FROM            todomonthly WHERE (([todomonthly_id] = @Original_todomonthly_id))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_todomonthly_id" ColumnName="todomonthly_id" DataSourceName="todolistDB.dbo.todomonthly" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Original_todomonthly_id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="todomonthly_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="todolistDBConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertMonthly" Modifier="Public" Name="InsertMonthly" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="InsertMonthly">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>INSERT INTO [todomonthly] ([todomonthly_text], [flag_id]) VALUES (@todomonthly_text, @flag_id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="todomonthly_text" ColumnName="todomonthly_text" DataSourceName="todolistDB.dbo.todomonthly" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@todomonthly_text" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="todomonthly_text" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="flag_id" ColumnName="flag_id" DataSourceName="todolistDB.dbo.todomonthly" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@flag_id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="flag_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+              </DbSource>
+              <DbSource ConnectionRef="todolistDBConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateMonthly" Modifier="Public" Name="UpdateMonthly" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="UpdateMonthly">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE [todomonthly] SET [todomonthly_text] = @todomonthly_text, [flag_id] = @flag_id WHERE (([todomonthly_id] = @Original_todomonthly_id))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="todomonthly_text" ColumnName="todomonthly_text" DataSourceName="todolistDB.dbo.todomonthly" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@todomonthly_text" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="todomonthly_text" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="flag_id" ColumnName="flag_id" DataSourceName="todolistDB.dbo.todomonthly" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@flag_id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="flag_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_todomonthly_id" ColumnName="todomonthly_id" DataSourceName="todolistDB.dbo.todomonthly" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Original_todomonthly_id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="todomonthly_id" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -194,7 +376,7 @@ WHERE (([tododaily_id] = @Original_tododaily_id))</CommandText>
   <xs:element name="MyDB" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="MyDB" msprop:Generator_UserDSName="MyDB">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="todoflag" msprop:Generator_TableClassName="todoflagDataTable" msprop:Generator_TableVarName="tabletodoflag" msprop:Generator_TablePropName="todoflag" msprop:Generator_RowDeletingName="todoflagRowDeleting" msprop:Generator_RowChangingName="todoflagRowChanging" msprop:Generator_RowEvHandlerName="todoflagRowChangeEventHandler" msprop:Generator_RowDeletedName="todoflagRowDeleted" msprop:Generator_UserTableName="todoflag" msprop:Generator_RowChangedName="todoflagRowChanged" msprop:Generator_RowEvArgName="todoflagRowChangeEvent" msprop:Generator_RowClassName="todoflagRow">
+        <xs:element name="todoflag" msprop:Generator_TableClassName="todoflagDataTable" msprop:Generator_TableVarName="tabletodoflag" msprop:Generator_RowChangedName="todoflagRowChanged" msprop:Generator_TablePropName="todoflag" msprop:Generator_RowDeletingName="todoflagRowDeleting" msprop:Generator_RowChangingName="todoflagRowChanging" msprop:Generator_RowEvHandlerName="todoflagRowChangeEventHandler" msprop:Generator_RowDeletedName="todoflagRowDeleted" msprop:Generator_RowClassName="todoflagRow" msprop:Generator_UserTableName="todoflag" msprop:Generator_RowEvArgName="todoflagRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="flag_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnflag_id" msprop:Generator_ColumnPropNameInRow="flag_id" msprop:Generator_ColumnPropNameInTable="flag_idColumn" msprop:Generator_UserColumnName="flag_id" type="xs:int" />
@@ -208,11 +390,41 @@ WHERE (([tododaily_id] = @Original_tododaily_id))</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tododaily" msprop:Generator_TableClassName="tododailyDataTable" msprop:Generator_TableVarName="tabletododaily" msprop:Generator_TablePropName="tododaily" msprop:Generator_RowDeletingName="tododailyRowDeleting" msprop:Generator_RowChangingName="tododailyRowChanging" msprop:Generator_RowEvHandlerName="tododailyRowChangeEventHandler" msprop:Generator_RowDeletedName="tododailyRowDeleted" msprop:Generator_UserTableName="tododaily" msprop:Generator_RowChangedName="tododailyRowChanged" msprop:Generator_RowEvArgName="tododailyRowChangeEvent" msprop:Generator_RowClassName="tododailyRow">
+        <xs:element name="tododaily" msprop:Generator_TableClassName="tododailyDataTable" msprop:Generator_TableVarName="tabletododaily" msprop:Generator_RowChangedName="tododailyRowChanged" msprop:Generator_TablePropName="tododaily" msprop:Generator_RowDeletingName="tododailyRowDeleting" msprop:Generator_RowChangingName="tododailyRowChanging" msprop:Generator_RowEvHandlerName="tododailyRowChangeEventHandler" msprop:Generator_RowDeletedName="tododailyRowDeleted" msprop:Generator_RowClassName="tododailyRow" msprop:Generator_UserTableName="tododaily" msprop:Generator_RowEvArgName="tododailyRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="tododaily_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columntododaily_id" msprop:Generator_ColumnPropNameInRow="tododaily_id" msprop:Generator_ColumnPropNameInTable="tododaily_idColumn" msprop:Generator_UserColumnName="tododaily_id" type="xs:int" />
               <xs:element name="tododaily_text" msprop:Generator_ColumnVarNameInTable="columntododaily_text" msprop:Generator_ColumnPropNameInRow="tododaily_text" msprop:Generator_ColumnPropNameInTable="tododaily_textColumn" msprop:Generator_UserColumnName="tododaily_text" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="flag_id" msprop:Generator_ColumnVarNameInTable="columnflag_id" msprop:Generator_ColumnPropNameInRow="flag_id" msprop:Generator_ColumnPropNameInTable="flag_idColumn" msprop:Generator_UserColumnName="flag_id" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="todoweekly" msprop:Generator_TableClassName="todoweeklyDataTable" msprop:Generator_TableVarName="tabletodoweekly" msprop:Generator_TablePropName="todoweekly" msprop:Generator_RowDeletingName="todoweeklyRowDeleting" msprop:Generator_RowChangingName="todoweeklyRowChanging" msprop:Generator_RowEvHandlerName="todoweeklyRowChangeEventHandler" msprop:Generator_RowDeletedName="todoweeklyRowDeleted" msprop:Generator_UserTableName="todoweekly" msprop:Generator_RowChangedName="todoweeklyRowChanged" msprop:Generator_RowEvArgName="todoweeklyRowChangeEvent" msprop:Generator_RowClassName="todoweeklyRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="todoweekly_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columntodoweekly_id" msprop:Generator_ColumnPropNameInRow="todoweekly_id" msprop:Generator_ColumnPropNameInTable="todoweekly_idColumn" msprop:Generator_UserColumnName="todoweekly_id" type="xs:int" />
+              <xs:element name="todoweekly_text" msprop:Generator_ColumnVarNameInTable="columntodoweekly_text" msprop:Generator_ColumnPropNameInRow="todoweekly_text" msprop:Generator_ColumnPropNameInTable="todoweekly_textColumn" msprop:Generator_UserColumnName="todoweekly_text" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="flag_id" msprop:Generator_ColumnVarNameInTable="columnflag_id" msprop:Generator_ColumnPropNameInRow="flag_id" msprop:Generator_ColumnPropNameInTable="flag_idColumn" msprop:Generator_UserColumnName="flag_id" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="todomonthly" msprop:Generator_TableClassName="todomonthlyDataTable" msprop:Generator_TableVarName="tabletodomonthly" msprop:Generator_TablePropName="todomonthly" msprop:Generator_RowDeletingName="todomonthlyRowDeleting" msprop:Generator_RowChangingName="todomonthlyRowChanging" msprop:Generator_RowEvHandlerName="todomonthlyRowChangeEventHandler" msprop:Generator_RowDeletedName="todomonthlyRowDeleted" msprop:Generator_UserTableName="todomonthly" msprop:Generator_RowChangedName="todomonthlyRowChanged" msprop:Generator_RowEvArgName="todomonthlyRowChangeEvent" msprop:Generator_RowClassName="todomonthlyRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="todomonthly_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columntodomonthly_id" msprop:Generator_ColumnPropNameInRow="todomonthly_id" msprop:Generator_ColumnPropNameInTable="todomonthly_idColumn" msprop:Generator_UserColumnName="todomonthly_id" type="xs:int" />
+              <xs:element name="todomonthly_text" msprop:Generator_ColumnVarNameInTable="columntodomonthly_text" msprop:Generator_ColumnPropNameInRow="todomonthly_text" msprop:Generator_ColumnPropNameInTable="todomonthly_textColumn" msprop:Generator_UserColumnName="todomonthly_text" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
@@ -232,6 +444,14 @@ WHERE (([tododaily_id] = @Original_tododaily_id))</CommandText>
     <xs:unique name="tododaily_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:tododaily" />
       <xs:field xpath="mstns:tododaily_id" />
+    </xs:unique>
+    <xs:unique name="todoweekly_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:todoweekly" />
+      <xs:field xpath="mstns:todoweekly_id" />
+    </xs:unique>
+    <xs:unique name="todomonthly_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:todomonthly" />
+      <xs:field xpath="mstns:todomonthly_id" />
     </xs:unique>
   </xs:element>
 </xs:schema>

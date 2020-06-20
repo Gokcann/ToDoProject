@@ -27,7 +27,7 @@ namespace ToDoProject.flags
             int id = Convert.ToInt32(Request.QueryString["id"].ToString());
             MyDBTableAdapters.todoflagTableAdapter adaptor = new MyDBTableAdapters.todoflagTableAdapter();
             adaptor.UpdateFlag(flagUpdate.Text, id);
-            Response.Redirect("/flags /listflag.aspx");
+            Response.Redirect("/flags/listflag.aspx");
         }
     }
 }

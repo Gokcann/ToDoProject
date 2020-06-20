@@ -74,14 +74,44 @@
     <Content Include="assets\js\bootstrap.js" />
     <Content Include="assets\js\bootstrap.min.js" />
     <Content Include="assets\js\jquery.js" />
+    <Content Include="daily\adddaily.aspx" />
+    <Content Include="daily\deletedaily.aspx" />
+    <Content Include="daily\listdaily.aspx" />
     <Content Include="flags\addflag.aspx" />
     <Content Include="flags\deleteflag.aspx" />
     <Content Include="flags\listflag.aspx" />
     <Content Include="flags\updateflag.aspx" />
     <Content Include="index.aspx" />
+    <Content Include="monthly\addmonthly.aspx" />
+    <Content Include="monthly\deletemonthly.aspx" />
+    <Content Include="monthly\listmonthly.aspx" />
     <Content Include="Web.config" />
+    <Content Include="weekly\addweekly.aspx" />
+    <Content Include="weekly\deleteweekly.aspx" />
+    <Content Include="weekly\listweekly.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="daily\adddaily.aspx.cs">
+      <DependentUpon>adddaily.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="daily\adddaily.aspx.designer.cs">
+      <DependentUpon>adddaily.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="daily\deletedaily.aspx.cs">
+      <DependentUpon>deletedaily.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="daily\deletedaily.aspx.designer.cs">
+      <DependentUpon>deletedaily.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="daily\listdaily.aspx.cs">
+      <DependentUpon>listdaily.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="daily\listdaily.aspx.designer.cs">
+      <DependentUpon>listdaily.aspx</DependentUpon>
+    </Compile>
     <Compile Include="flags\addflag.aspx.cs">
       <DependentUpon>addflag.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -117,12 +147,54 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="monthly\addmonthly.aspx.cs">
+      <DependentUpon>addmonthly.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="monthly\addmonthly.aspx.designer.cs">
+      <DependentUpon>addmonthly.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="monthly\deletemonthly.aspx.cs">
+      <DependentUpon>deletemonthly.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="monthly\deletemonthly.aspx.designer.cs">
+      <DependentUpon>deletemonthly.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="monthly\listmonthly.aspx.cs">
+      <DependentUpon>listmonthly.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="monthly\listmonthly.aspx.designer.cs">
+      <DependentUpon>listmonthly.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MyDB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MyDB.xsd</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="weekly\addweekly.aspx.cs">
+      <DependentUpon>addweekly.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="weekly\addweekly.aspx.designer.cs">
+      <DependentUpon>addweekly.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="weekly\deleteweekly.aspx.cs">
+      <DependentUpon>deleteweekly.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="weekly\deleteweekly.aspx.designer.cs">
+      <DependentUpon>deleteweekly.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="weekly\listweekly.aspx.cs">
+      <DependentUpon>listweekly.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="weekly\listweekly.aspx.designer.cs">
+      <DependentUpon>listweekly.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="MyDB.xsc">
@@ -148,9 +220,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="daily\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
